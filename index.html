@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+
+    <!-- ЗАДАНИЕ 1 -->
+
+  <div>Пользователи:</div>
+  <ul>
+    <li>Джон</li>
+    <li>Пит</li>
+  </ul>
+
+    <script>
+        
+    const div = document.querySelector("div");
+    const ul = document.querySelector("ul");
+    const pitLi = document.querySelector("ul li:nth-child(2)");
+
+    console.log(div); 
+    console.log(ul); 
+    console.log(pitLi); 
+    </script>
+
+    <!-- ЗАДАНИЕ 2  -->
+    
+    <script>
+    const listofItems = document.querySelectorAll("ul li");
+
+    for (const listofItem of listofItems) { 
+    listofItem.classList.add("list-item");
+}
+
+console.log(listofItems)
+</script>
+
+    <!-- ЗАДАНИЕ 3 -->
+<script>
+  const vveditechislo = parseInt(prompt("Введите цифру"));
+
+for (let i = 0; i < vveditechislo; i++) { 
+    const div = document.createElement("div"); 
+    div.textContent = `Пользователь ${i + 1}:`; 
+ 
+    const ul = document.createElement("ul"); 
+    ul.innerHTML = `<li>Джон</li><li>Пит`; 
+ 
+    div.appendChild(ul); 
+    console.log(div);   
+}
+</script>
+
+<!-- ЗАДАНИЕ 4 -->
+
+<script>
+    const form = document.createElement("form");
+
+    const nameInput = document.createElement("input");
+    nameInput.type = "text";
+    nameInput.name = "name";
+    nameInput.placeholder = "имя";
+
+    const emailInput = document.createElement("input");
+    emailInput.type = "text";
+    emailInput.name = "email";
+    emailInput.placeholder = "email";
+
+    const submitButton = document.createElement("button");
+    submitButton.type = "submit";
+    submitButton.innerText = "Отправить";
+
+    form.appendChild(nameInput);    
+    form.appendChild(emailInput);
+    form.appendChild(submitButton);
+
+    document.body.append(form);
+</script>
+</body>
+</html>
